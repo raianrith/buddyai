@@ -1,18 +1,26 @@
 
 #Install packages by
 # pipenv install openai
-
-from decouple import config
-
-password = config('password',default='')
-
-# to run, streamlit run buddyai.py 
-
 # Load Libraries
 import streamlit as st 
 import openai
 import time
 from streamlit_chat import message
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+#from decouple import config
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+password = os.environ.get('API_KEY')
+#password = config('password',default='')
+
+
+#to run, streamlit run buddyai.py 
+
+
 
 # Set the GPT-3 API key
 openai.api_key = password
