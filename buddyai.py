@@ -45,7 +45,7 @@ if category == 'Home':
     with col4:
         st.text("")
     with col5:
-        st.markdown("# Welcome to Buddy.AI ! 🤖")
+        st.markdown("# Hello to Buddy.AI ! 🤖")
     with col6:
         st.text("")
         
